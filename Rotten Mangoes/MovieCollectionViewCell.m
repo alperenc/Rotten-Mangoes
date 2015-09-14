@@ -10,4 +10,8 @@
 
 @implementation MovieCollectionViewCell
 
+-(void)prepareForReuse {
+    self.posterImageView = nil;
+}
+
 @end

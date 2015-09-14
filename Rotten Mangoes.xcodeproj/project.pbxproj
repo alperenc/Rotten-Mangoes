@@ -14,6 +14,7 @@
 		C7CC5B3B1BA7498B00809625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7CC5B3A1BA7498B00809625 /* Assets.xcassets */; };
 		C7CC5B3E1BA7498B00809625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC5B3C1BA7498B00809625 /* LaunchScreen.storyboard */; };
 		C7CC5B471BA752EF00809625 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC5B461BA752EF00809625 /* Movie.m */; settings = {ASSET_TAGS = (); }; };
+		C7CC5B4A1BA762D100809625 /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC5B491BA762D100809625 /* MovieCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		C7CC5B3F1BA7498B00809625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7CC5B451BA752EF00809625 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		C7CC5B461BA752EF00809625 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		C7CC5B481BA762D100809625 /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		C7CC5B491BA762D100809625 /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				C7CC5B461BA752EF00809625 /* Movie.m */,
 				C7CC5B341BA7498B00809625 /* ViewController.h */,
 				C7CC5B351BA7498B00809625 /* ViewController.m */,
+				C7CC5B481BA762D100809625 /* MovieCollectionViewCell.h */,
+				C7CC5B491BA762D100809625 /* MovieCollectionViewCell.m */,
 				C7CC5B371BA7498B00809625 /* Main.storyboard */,
 				C7CC5B3A1BA7498B00809625 /* Assets.xcassets */,
 				C7CC5B3C1BA7498B00809625 /* LaunchScreen.storyboard */,
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7CC5B361BA7498B00809625 /* ViewController.m in Sources */,
+				C7CC5B4A1BA762D100809625 /* MovieCollectionViewCell.m in Sources */,
 				C7CC5B331BA7498B00809625 /* AppDelegate.m in Sources */,
 				C7CC5B471BA752EF00809625 /* Movie.m in Sources */,
 				C7CC5B301BA7498B00809625 /* main.m in Sources */,
