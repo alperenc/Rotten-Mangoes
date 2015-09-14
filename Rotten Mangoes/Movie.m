@@ -10,8 +10,7 @@
 
 @implementation Movie
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
         self.title = dictionary[@"title"];
@@ -19,15 +18,16 @@
         self.runtime = dictionary[@"runtime"];
         self.cast = dictionary[@"abridged_cast"];
         self.links = dictionary[@"links"];
-        
-        NSMutableDictionary *mutablePosters = [dictionary[@"posters"] mutableCopy];
-        NSString *originalURLString = mutablePosters[@"original"];
-//        NSLog(@"%@", originalURLString);
-        mutablePosters[@"original"] = [NSString stringWithFormat:@"http://%@", [originalURLString substringFromIndex:([originalURLString rangeOfString:@"dkpu1ddg7pbsk.cloudfront.net"].location)]];
-        
-        self.posterLinks = [mutablePosters copy];
+        self.posterLinks = [[self getMutablePosters:dictionary] copy];
     }
     return self;
+}
+
+- (NSMutableDictionary *)getMutablePosters:(NSDictionary *)dictionary {
+    NSMutableDictionary *mutablePosters = [dictionary[@"posters"] mutableCopy];
+    NSString *originalURLString = mutablePosters[@"original"];
+    mutablePosters[@"original"] = [NSString stringWithFormat:@"http://%@", [originalURLString substringFromIndex:([originalURLString rangeOfString:@"dkpu1ddg7pbsk.cloudfront.net"].location)]];
+    return mutablePosters;
 }
 
 @end
