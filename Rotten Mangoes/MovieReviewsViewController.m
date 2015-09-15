@@ -27,6 +27,13 @@
     
     self.navigationItem.title = self.movie.title;
     
+    [self getInitialData];
+}
+
+#pragma mark - General Methods -
+
+- (void)getInitialData {
+    
     NSURL *posterURL = self.movie.originalPosterURL;
     
     NSURLSession *session = [NSURLSession sharedSession];
