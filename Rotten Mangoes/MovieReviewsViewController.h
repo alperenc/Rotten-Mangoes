@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MovieReviewsViewController.h
 //  Rotten Mangoes
 //
 //  Created by Alp Eren Can on 14/09/15.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
-@interface ViewController : UIViewController
+@interface MovieReviewsViewController : UIViewController
 
+@property (nonatomic) Movie *movie;
 
 @end
-

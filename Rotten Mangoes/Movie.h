@@ -14,8 +14,9 @@
 @property (nonatomic) NSNumber *year;
 @property (nonatomic) NSNumber *runtime;
 @property (nonatomic) NSArray *cast;
-@property (nonatomic) NSDictionary *links;
-@property (nonatomic) NSDictionary *posterLinks;
+@property (nonatomic) NSURL *reviewsURL;
+@property (nonatomic) NSURL *thumbnailPosterURL;
+@property (nonatomic) NSURL *originalPosterURL;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -7,6 +7,7 @@
 //
 
 #import "Movie.h"
+#import "Review.h"
 
 @implementation Movie
 
@@ -17,17 +18,15 @@
         self.year = dictionary[@"year"];
         self.runtime = dictionary[@"runtime"];
         self.cast = dictionary[@"abridged_cast"];
-        self.links = dictionary[@"links"];
-        self.posterLinks = [[self getMutablePosters:dictionary] copy];
+        self.reviewsURL = dictionary[@"links"][@"reviews"];
+        self.thumbnailPosterURL = [NSURL URLWithString:dictionary[@"posters"][@"thumbnail"]];
+        self.originalPosterURL = [self getOriginalPosterURL:dictionary[@"posters"][@"original"]];
     }
     return self;
 }
 
-- (NSMutableDictionary *)getMutablePosters:(NSDictionary *)dictionary {
-    NSMutableDictionary *mutablePosters = [dictionary[@"posters"] mutableCopy];
-    NSString *originalURLString = mutablePosters[@"original"];
-    mutablePosters[@"original"] = [NSString stringWithFormat:@"http://%@", [originalURLString substringFromIndex:([originalURLString rangeOfString:@"dkpu1ddg7pbsk.cloudfront.net"].location)]];
-    return mutablePosters;
+- (NSURL *)getOriginalPosterURL:(NSString *)originalURLString {
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", [originalURLString substringFromIndex:([originalURLString rangeOfString:@"dkpu1ddg7pbsk.cloudfront.net"].location)]]];
 }
 
 @end

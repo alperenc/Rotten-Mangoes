@@ -6,19 +6,21 @@
 //  Copyright © 2015 Alp Eren Can. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MovieCollectionViewController.h"
 #import "MovieCollectionViewCell.h"
+#import "MovieReviewsViewController.h"
+#import "Constants.h"
 
-NSString *const API_KEY = @"j9fhnct2tp8wu2q9h75kanh9";
+//#define NSString *const API_KEY = @"j9fhnct2tp8wu2q9h75kanh9";
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MovieCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
-@implementation ViewController
+@implementation MovieCollectionViewController
 
 #pragma mark - View COntroller Life Cycle -
 
@@ -36,8 +38,13 @@ NSString *const API_KEY = @"j9fhnct2tp8wu2q9h75kanh9";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MovieCollectionViewCell *movieCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"movieCell" forIndexPath:indexPath];
-    movieCell.object = self.movies[indexPath.row];
+    movieCell.movie = self.movies[indexPath.row];
     return movieCell;
+}
+
+#pragma mark - UICollectionView Delegate -
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showMovieReviews" sender:[collectionView cellForItemAtIndexPath:indexPath]];
 }
 
 #pragma mark - General Methods -
@@ -74,6 +81,13 @@ NSString *const API_KEY = @"j9fhnct2tp8wu2q9h75kanh9";
     }];
     
     [dataTask resume];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(MovieCollectionViewCell *)sender {
+    if ([segue.identifier isEqualToString:@"showMovieReviews"]) {
+        MovieReviewsViewController *movieReviewsVC = (MovieReviewsViewController *)[segue destinationViewController];
+        movieReviewsVC.movie = sender.movie;
+    }
 }
 
 @end

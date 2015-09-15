@@ -1,5 +1,5 @@
 //
-//  MovieCollectionViewCell.h
+//  ReviewTableViewCell.h
 //  Rotten Mangoes
 //
 //  Created by Alp Eren Can on 14/09/15.
@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Movie.h"
+#import "Review.h"
 
-@interface MovieCollectionViewCell : UICollectionViewCell
+@interface ReviewTableViewCell : UITableViewCell
 
-@property (nonatomic) Movie *movie;
+@property (nonatomic) Review *review;
 
 @end

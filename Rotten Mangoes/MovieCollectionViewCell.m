@@ -11,6 +11,7 @@
 @interface MovieCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
+@property (nonatomic) NSURLSessionDownloadTask *downloadTask;
 
 @end
 
@@ -18,8 +19,8 @@
 
 #pragma mark - Accessors -
 
-- (void)setObject:(Movie *)object {
-    _object = object;
+- (void)setMovie:(Movie *)movie {
+    _movie = movie;
     
     [self setup];
 }
@@ -27,23 +28,27 @@
 #pragma mark - General Methods -
 
 - (void)setup {
-
-    NSString *posterString = self.object.posterLinks[@"original"];
-    NSURL *posterURL = [NSURL URLWithString:posterString];
+    
+    if (self.downloadTask) {
+        [self.downloadTask suspend];
+        [self.downloadTask cancel];
+    }
+    
+    NSURL *posterURL = self.movie.originalPosterURL;
     self.posterImageView.image = nil;
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:posterURL completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    self.downloadTask = [session downloadTaskWithURL:posterURL completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (!error) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                if ([posterString isEqualToString:self.object.posterLinks[@"original"]]) {
+                if ([posterURL isEqual:self.movie.originalPosterURL]) {
                     self.posterImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
                 }
             });
         }
     }];
     
-    [downloadTask resume];
+    [self.downloadTask resume];
 }
 
 @end
