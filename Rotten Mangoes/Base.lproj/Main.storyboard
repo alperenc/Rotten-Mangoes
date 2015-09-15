@@ -22,6 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.63928649479999999" blue="0.5033052885" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.68040368449999999" green="0.94752513110000003" blue="0.40320218340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="XoP-fk-csw">
                                     <size key="itemSize" width="150" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -154,6 +155,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.63928649479999999" blue="0.5033052885" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.68040368449999999" green="0.94752513110000003" blue="0.40320218340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r2t-ml-iMN" firstAttribute="leading" secondItem="sSH-bK-kpX" secondAttribute="leading" id="1YW-at-MI5"/>
                             <constraint firstAttribute="trailing" secondItem="J4b-9B-C3h" secondAttribute="trailing" id="1yf-gn-LAs"/>
@@ -184,6 +186,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.63928649479999999" blue="0.5033052885" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.63928649479999999" blue="0.5033052885" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -195,4 +200,5 @@
             <point key="canvasLocation" x="578" y="1112"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
