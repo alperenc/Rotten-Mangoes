@@ -20,6 +20,8 @@
 
 @implementation MovieReviewsViewController
 
+#pragma mark - View Controller Life Cycle -
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -67,6 +69,8 @@
     [dataTask resume];
 }
 
+#pragma mark - UITableView Data Source -
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.reviews.count;
 }
@@ -78,6 +82,8 @@
     
     return cell;
 }
+
+#pragma mark - UITableView Delegate -
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 120.0;

@@ -22,7 +22,7 @@
 
 @implementation MovieCollectionViewController
 
-#pragma mark - View COntroller Life Cycle -
+#pragma mark - View Controller Life Cycle -
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -82,6 +82,8 @@
     
     [dataTask resume];
 }
+
+#pragma mark - Navigation -
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(MovieCollectionViewCell *)sender {
     if ([segue.identifier isEqualToString:@"showMovieReviews"]) {
