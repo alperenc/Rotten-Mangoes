@@ -6,7 +6,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--In Theaters-->
+        <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MovieCollectionViewController" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                             <constraint firstAttribute="trailing" secondItem="65b-nD-D2v" secondAttribute="trailing" id="ynA-9u-CWa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="In Theaters" id="Tql-9Z-T0z"/>
+                    <navigationItem key="navigationItem" title="Movies" id="Tql-9Z-T0z"/>
                     <connections>
                         <outlet property="collectionView" destination="65b-nD-D2v" id="B1X-fh-yA4"/>
                         <segue destination="lcT-qu-jrf" kind="show" identifier="showMovieReviews" id="Odw-Xo-yJm"/>
@@ -155,7 +155,6 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.63928649479999999" blue="0.5033052885" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.68040368449999999" green="0.94752513110000003" blue="0.40320218340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r2t-ml-iMN" firstAttribute="leading" secondItem="sSH-bK-kpX" secondAttribute="leading" id="1YW-at-MI5"/>
                             <constraint firstAttribute="trailing" secondItem="J4b-9B-C3h" secondAttribute="trailing" id="1yf-gn-LAs"/>
@@ -167,7 +166,13 @@
                             <constraint firstAttribute="trailing" secondItem="r2t-ml-iMN" secondAttribute="trailing" id="p4Y-8R-vwT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wAg-wv-zAc"/>
+                    <navigationItem key="navigationItem" id="wAg-wv-zAc">
+                        <barButtonItem key="rightBarButtonItem" title="Theaters" id="qT6-MB-sGn">
+                            <connections>
+                                <segue destination="A30-6w-LoO" kind="show" identifier="showTheaterMap" id="pcW-RI-6Od"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="posterImageView" destination="r2t-ml-iMN" id="dbH-13-0Pa"/>
                         <outlet property="reviewsTableView" destination="J4b-9B-C3h" id="27S-Vs-xeL"/>
@@ -176,6 +181,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQm-hq-Dab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2028" y="1112"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="YYQ-wA-ROx">
+            <objects>
+                <viewController id="A30-6w-LoO" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mS2-Bj-RSf"/>
+                        <viewControllerLayoutGuide type="bottom" id="QI1-EQ-uZJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5VQ-Jg-KXN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="421-eU-x3U">
+                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="A30-6w-LoO" id="a5z-nV-QCa"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.63928649479999999" blue="0.5033052885" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="421-eU-x3U" firstAttribute="top" secondItem="mS2-Bj-RSf" secondAttribute="bottom" id="0WD-qu-QQt"/>
+                            <constraint firstItem="421-eU-x3U" firstAttribute="leading" secondItem="5VQ-Jg-KXN" secondAttribute="leading" id="6T7-Cc-0bA"/>
+                            <constraint firstItem="421-eU-x3U" firstAttribute="height" secondItem="5VQ-Jg-KXN" secondAttribute="height" multiplier="0.5" id="90X-y2-wg4"/>
+                            <constraint firstAttribute="trailing" secondItem="421-eU-x3U" secondAttribute="trailing" id="vPN-Hr-eLa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="421-eU-x3U" id="MsQ-pV-nWF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3M-Ma-Pqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="1112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="axz-sk-QqT">

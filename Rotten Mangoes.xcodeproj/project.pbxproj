@@ -18,6 +18,8 @@
 		C7CC5B501BA7939100809625 /* MovieReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC5B4F1BA7939100809625 /* MovieReviewsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C7CC5B531BA79F7C00809625 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC5B521BA79F7C00809625 /* Review.m */; settings = {ASSET_TAGS = (); }; };
 		C7CC5B561BA7B14A00809625 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC5B551BA7B14A00809625 /* ReviewTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C7F96F371BA8D9C400288D57 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F96F361BA8D9C400288D57 /* MapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C7F96F3C1BA9021800288D57 /* Vancouver.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C7F96F3B1BA9021800288D57 /* Vancouver.gpx */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,9 @@
 		C7CC5B541BA7B14A00809625 /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
 		C7CC5B551BA7B14A00809625 /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
 		C7CC5B571BA8ABB900809625 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		C7F96F351BA8D9C400288D57 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		C7F96F361BA8D9C400288D57 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		C7F96F3B1BA9021800288D57 /* Vancouver.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vancouver.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 		C7CC5B221BA7498B00809625 = {
 			isa = PBXGroup;
 			children = (
+				C7F96F3B1BA9021800288D57 /* Vancouver.gpx */,
 				C7CC5B2D1BA7498B00809625 /* Rotten Mangoes */,
 				C7CC5B2C1BA7498B00809625 /* Products */,
 			);
@@ -85,6 +91,8 @@
 				C7CC5B351BA7498B00809625 /* MovieCollectionViewController.m */,
 				C7CC5B4E1BA7939100809625 /* MovieReviewsViewController.h */,
 				C7CC5B4F1BA7939100809625 /* MovieReviewsViewController.m */,
+				C7F96F351BA8D9C400288D57 /* MapViewController.h */,
+				C7F96F361BA8D9C400288D57 /* MapViewController.m */,
 				C7CC5B481BA762D100809625 /* MovieCollectionViewCell.h */,
 				C7CC5B491BA762D100809625 /* MovieCollectionViewCell.m */,
 				C7CC5B541BA7B14A00809625 /* ReviewTableViewCell.h */,
@@ -166,6 +174,7 @@
 				C7CC5B3E1BA7498B00809625 /* LaunchScreen.storyboard in Resources */,
 				C7CC5B3B1BA7498B00809625 /* Assets.xcassets in Resources */,
 				C7CC5B391BA7498B00809625 /* Main.storyboard in Resources */,
+				C7F96F3C1BA9021800288D57 /* Vancouver.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +188,7 @@
 				C7CC5B361BA7498B00809625 /* MovieCollectionViewController.m in Sources */,
 				C7CC5B501BA7939100809625 /* MovieReviewsViewController.m in Sources */,
 				C7CC5B4A1BA762D100809625 /* MovieCollectionViewCell.m in Sources */,
+				C7F96F371BA8D9C400288D57 /* MapViewController.m in Sources */,
 				C7CC5B331BA7498B00809625 /* AppDelegate.m in Sources */,
 				C7CC5B471BA752EF00809625 /* Movie.m in Sources */,
 				C7CC5B561BA7B14A00809625 /* ReviewTableViewCell.m in Sources */,
