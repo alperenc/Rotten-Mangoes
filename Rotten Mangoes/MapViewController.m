@@ -9,8 +9,10 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import "AppDelegate.h"
+#import "TheaterInfo.h"
+#import "Theater.h"
 
-#define zoominMapArea 2000
+#define zoominMapArea 30000
 
 @interface MapViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -47,13 +49,28 @@
     
     [self.mapView setRegion:adjustedRegion animated:YES];
     
+    [TheaterInfo theatersForMovieName:self.movieName atZipCode:self.userZipCode completion:^(NSArray *info, NSError *error) {
+        if (!error){
+            
+            for (NSDictionary *theaterInfo in info){
+                
+                NSString *name = theaterInfo[@"name"];
+                NSString *address = theaterInfo[@"address"];
+                NSNumber *lat = theaterInfo[@"lat"];
+                NSNumber *lng = theaterInfo[@"lng"];
+                
+                Theater *theater = [[Theater alloc] initWithCoordinate:CLLocationCoordinate2DMake([lat doubleValue], [lng doubleValue]) title:name subtitle:address];
+                
+                dispatch_async(dispatch_get_main_queue(), ^(){
+                    [self.mapView addAnnotation:theater];
+                });
+            }
+        }
+    }];
+    
 }
 
 #pragma mark - MKMapView delegate -
-
-- (void)mapViewDidFinishLoadingMap:(nonnull MKMapView *)mapView{
-    [self initiateMap];
-}
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     
@@ -67,20 +84,23 @@
             CLPlacemark *placemark = placemarks[0];
             self.userZipCode = placemark.postalCode;
             
-            NSLog(@"%@", self.userZipCode);
+            [self initiateMap];
         }];
     }
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    
+    MKPinAnnotationView *pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"theaterAnno"];
+    
+    pinView.canShowCallout = YES;
+    
+    return pinView;
 }
-*/
 
 @end

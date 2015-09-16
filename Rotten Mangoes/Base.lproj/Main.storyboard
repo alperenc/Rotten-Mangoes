@@ -169,7 +169,7 @@
                     <navigationItem key="navigationItem" id="wAg-wv-zAc">
                         <barButtonItem key="rightBarButtonItem" title="Theaters" id="qT6-MB-sGn">
                             <connections>
-                                <segue destination="A30-6w-LoO" kind="show" identifier="showTheaterMap" id="pcW-RI-6Od"/>
+                                <segue destination="A30-6w-LoO" kind="show" identifier="showTheaters" id="pcW-RI-6Od"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

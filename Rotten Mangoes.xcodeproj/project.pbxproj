@@ -21,6 +21,7 @@
 		C7F96F371BA8D9C400288D57 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F96F361BA8D9C400288D57 /* MapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C7F96F3C1BA9021800288D57 /* Vancouver.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C7F96F3B1BA9021800288D57 /* Vancouver.gpx */; settings = {ASSET_TAGS = (); }; };
 		C7F96F3F1BA90AC700288D57 /* Theater.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F96F3E1BA90AC700288D57 /* Theater.m */; settings = {ASSET_TAGS = (); }; };
+		C7F96F421BA9144F00288D57 /* TheaterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F96F411BA9144F00288D57 /* TheaterInfo.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		C7F96F3B1BA9021800288D57 /* Vancouver.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vancouver.gpx; sourceTree = "<group>"; };
 		C7F96F3D1BA90AC700288D57 /* Theater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theater.h; sourceTree = "<group>"; };
 		C7F96F3E1BA90AC700288D57 /* Theater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theater.m; sourceTree = "<group>"; };
+		C7F96F401BA9144F00288D57 /* TheaterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheaterInfo.h; sourceTree = "<group>"; };
+		C7F96F411BA9144F00288D57 /* TheaterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheaterInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				C7CC5B521BA79F7C00809625 /* Review.m */,
 				C7F96F3D1BA90AC700288D57 /* Theater.h */,
 				C7F96F3E1BA90AC700288D57 /* Theater.m */,
+				C7F96F401BA9144F00288D57 /* TheaterInfo.h */,
+				C7F96F411BA9144F00288D57 /* TheaterInfo.m */,
 				C7CC5B341BA7498B00809625 /* MovieCollectionViewController.h */,
 				C7CC5B351BA7498B00809625 /* MovieCollectionViewController.m */,
 				C7CC5B4E1BA7939100809625 /* MovieReviewsViewController.h */,
@@ -192,6 +197,7 @@
 			files = (
 				C7CC5B361BA7498B00809625 /* MovieCollectionViewController.m in Sources */,
 				C7CC5B501BA7939100809625 /* MovieReviewsViewController.m in Sources */,
+				C7F96F421BA9144F00288D57 /* TheaterInfo.m in Sources */,
 				C7CC5B4A1BA762D100809625 /* MovieCollectionViewCell.m in Sources */,
 				C7F96F371BA8D9C400288D57 /* MapViewController.m in Sources */,
 				C7CC5B331BA7498B00809625 /* AppDelegate.m in Sources */,

@@ -9,6 +9,7 @@
 #import "MovieReviewsViewController.h"
 #import "ReviewTableViewCell.h"
 #import "Constants.h"
+#import "MapViewController.h"
 
 @interface MovieReviewsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
@@ -98,6 +99,15 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return @"Reviews";
+}
+
+#pragma mark - Navigation -
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showTheaters"]) {
+        MapViewController *mapVC = (MapViewController *)[segue destinationViewController];
+        mapVC.movieName = self.movie.title;
+    }
 }
 
 @end
