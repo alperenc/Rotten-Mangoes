@@ -15,6 +15,7 @@
 @interface MapViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic) CLLocation *currentLocation;
+@property (nonatomic) NSString *userZipCode;
 
 @property (nonatomic) BOOL userLocationUpdated;
 
@@ -60,6 +61,14 @@
         [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate
                                  animated:YES];
         self.userLocationUpdated = YES;
+        
+        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+        [geocoder reverseGeocodeLocation:self.mapView.userLocation.location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+            CLPlacemark *placemark = placemarks[0];
+            self.userZipCode = placemark.postalCode;
+            
+            NSLog(@"%@", self.userZipCode);
+        }];
     }
     
 }

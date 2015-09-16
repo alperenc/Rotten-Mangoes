@@ -20,6 +20,7 @@
 		C7CC5B561BA7B14A00809625 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC5B551BA7B14A00809625 /* ReviewTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		C7F96F371BA8D9C400288D57 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F96F361BA8D9C400288D57 /* MapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C7F96F3C1BA9021800288D57 /* Vancouver.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C7F96F3B1BA9021800288D57 /* Vancouver.gpx */; settings = {ASSET_TAGS = (); }; };
+		C7F96F3F1BA90AC700288D57 /* Theater.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F96F3E1BA90AC700288D57 /* Theater.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		C7F96F351BA8D9C400288D57 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		C7F96F361BA8D9C400288D57 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C7F96F3B1BA9021800288D57 /* Vancouver.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vancouver.gpx; sourceTree = "<group>"; };
+		C7F96F3D1BA90AC700288D57 /* Theater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theater.h; sourceTree = "<group>"; };
+		C7F96F3E1BA90AC700288D57 /* Theater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theater.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				C7CC5B461BA752EF00809625 /* Movie.m */,
 				C7CC5B511BA79F7C00809625 /* Review.h */,
 				C7CC5B521BA79F7C00809625 /* Review.m */,
+				C7F96F3D1BA90AC700288D57 /* Theater.h */,
+				C7F96F3E1BA90AC700288D57 /* Theater.m */,
 				C7CC5B341BA7498B00809625 /* MovieCollectionViewController.h */,
 				C7CC5B351BA7498B00809625 /* MovieCollectionViewController.m */,
 				C7CC5B4E1BA7939100809625 /* MovieReviewsViewController.h */,
@@ -194,6 +199,7 @@
 				C7CC5B561BA7B14A00809625 /* ReviewTableViewCell.m in Sources */,
 				C7CC5B531BA79F7C00809625 /* Review.m in Sources */,
 				C7CC5B301BA7498B00809625 /* main.m in Sources */,
+				C7F96F3F1BA90AC700288D57 /* Theater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
